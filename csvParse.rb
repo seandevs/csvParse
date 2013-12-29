@@ -26,5 +26,3 @@ end
 b.sort_by {|_key, value| value}.each do |k, v|
 	puts "#{k} :: #{v} "
 end
-
-# puts words.join(",")
