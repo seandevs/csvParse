@@ -3,8 +3,6 @@ require 'csv'
 words = []
 
 CSV.foreach(File.path(ARGV[0])) do |col|
-    # Where col corresponds to a zero-based value/column in the csv
-    # words << [col[0] + " " + col[1]]
     sport_name = col[0].to_s
     sport_name_match = ARGV[1].to_s
 
