@@ -10,7 +10,7 @@ CSV.foreach(File.path(ARGV[0])) do |col|
 
     if sport_name =~ /#{sport_name_match}/i
     	prewords = []
-    	prewords << col[1].downcase.split(/,/)
+    	prewords << col[1].downcase.split.join(" ").split(/,/)
     	prewords.each do |pw|
     		words << pw
     	end
@@ -20,7 +20,7 @@ end
 b = Hash.new(0)
 
 words.join(",").split(/,/).each do |w|
-	b[w] += 1
+	b[w.lstrip.rstrip] += 1
 end
 
 b.sort_by {|_key, value| value}.each do |k, v|
