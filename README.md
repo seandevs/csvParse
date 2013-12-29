@@ -1,0 +1,1 @@
+the first parameter is the name of the file the second parameter is the name of the sport that you want to parse by
